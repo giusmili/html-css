@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500' rel='stylesheet' type='text/css'>
+	<title>Données tabulaires</title>
+</head>
+<body>
+	<style scoped>
+	body{
+		font:16px 'Roboto',sans-serif;
+		font-size-adjust:0.5;
+		background: #fafafa;
+		margin:0;
+	}
+	table,p,section{
+		width: 800px;
+		margin:5px auto;
+		background: #fff;
+		box-shadow: 0 0 5px rgba(0,0,0,0.2);
+
+
+	}
+	p{
+		padding:3px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	p:first-line{
+		font-size: x-large;
+	}
+	details>p{
+		background: #fff;
+		width: auto;
+
+	}
+	details>p:first-line,section>p:first-line{
+		color:#ED0927;
+	}
+		table,tr,td{
+			border:solid 1px #999;
+			border-collapse: collapse;
+	}
+
+	td{
+		text-align: center;
+	}
+	tr{
+		line-height: 25px;
+	}
+	tr:first-child,tr:last-child{
+		background: #ccc;
+		line-height: 30px;
+
+	}
+	caption{
+		margin-bottom:5px;
+		font-size: large;
+	}
+	details{
+		width: 600px;
+		margin:10px auto;
+		display: block;
+	}
+	summary{
+		color:#1F73F2;
+		outline:none;
+	}
+	hr{
+		border:0;
+		background: #ccc;
+		height: 1px;
+		margin:15px 0;
+	}
+
+	</style>
+	<table>
+		<caption class="inner-title">Données tabulaires</caption>
+		
+		<tr>
+			<td>item 1</td>
+			<td>item 2</td>
+			<td>item 3</td>
+			<td>item 4</td>
+			<td>item 5</td>
+		</tr>
+		<tr>
+			<td>item 1</td>
+			<td>item 2</td>
+			<td>item 3</td>
+			<td>item 4</td>
+			<td>item 5</td>
+		</tr>
+		<tr>
+			<td>item 1</td>
+			<td>item 2</td>
+			<td>item 3</td>
+			<td>item 4</td>
+			<td>item 5</td>
+		</tr>
+		<tr>
+			<td>item 1</td>
+			<td>item 2</td>
+			<td>item 3</td>
+			<td>item 4</td>
+			<td>item 5</td>
+		</tr>
+		<tr>
+			<td>item 1</td>
+			<td>item 2</td>
+			<td>item 3</td>
+			<td>item 4</td>
+			<td>item 5</td>
+		</tr>
+	</table>
+	<details>
+		  <summary>Information</summary>
+		  <p>If your browser supports this element, it should allow
+		  you to expand and collapse these details.</p>
+	</details>
+	<hr>
+	<section>
+		<p>La méthode wrap, enroule le contenu d'un élément contenu dans un autre élémenent. Provident doloremque eligendi, accusamus voluptatem voluptas libero corporis, illum facere sed aspernatur nesciunt, quia maiores rerum, labore voluptatum ex placeat repudiandae distinctio.</p>
+	</section>
+	<script type="text/javascript">
+		$(function(){
+			//alert("ok");
+	$('<span>&nbsp;&amp; jQuery</span>').appendTo('.inner-title');//insère un élément à la fin de la cible voir prependTo()
+			
+			$('<p>Insertion dynamique du paragraphe Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tempore deleniti, quos perferendis corporis ab accusamus magni quibusdam tempora ea porro quae explicabo. Assumenda recusandae, esse dolorum eveniet atque. Iusto.</p>').insertBefore('table');
+				//insère un élément avant la cible voir insertAfter()
+			
+			$('section>p').wrapInner('<i></i>');//wrapInner enroule avec la balise <i> le contenu du <p>
+
+			$('section>p>i').wrap('<strong></strong>');//ici wrap enroule le contenu de la balise <i>
+			//$('caption').remove(':contains("tabulaires")');
+			//$('section').prepend("<h2>La suite</h2>");
+
+
+
+		});
+
+
+	</script>
+</body>
+</html>

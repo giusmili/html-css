@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>Modification javascript</title>
+</head>
+
+<body text="navy"><center><br>
+<a href="#" onclick="javascript:alert(this.tagName);"><font face="verdana">Cliquez ici</font></a><p><font face="verdana">
+
+<script language="JavaScript">
+<!--
+
+document.write("Dernière modification effectuée le : " + document.lastModified)
+// -->
+</script><p>
+
+<script language="javascript">
+<!--
+document.write("<img src='gif/"+ parseInt(Math.random()*3) +".gif' width=440 height=70 alt='Image aléatoire'>");
+//-->
+</script><p>
+
+<!--une image par semaine-->
+
+<script language="javascript">
+<!--
+now=new Date();
+day=now.getDay();
+document.write("<img src='gif/" + day + ".gif' width=440 height=70 alt='Image aléatoire'>");
+//-->
+</script>
+
+
+
+<p style="font-size:x-small;">
+
+
+
+
+
+
+<script language="javascript">
+<!--
+date=document.lastModified
+jour=date.charAt(3)+date.charAt(4)
+mois=date.charAt(0)+date.charAt(1)
+annee=date.charAt(6)+date.charAt(7)+date.charAt(8)+date.charAt(9)
+document.write("Dernière modification de ce document : "+jour+"/"+mois+"/"+annee)
+//-->
+</script></font>
+
+
+
+
+
+</body>
+
+</html>

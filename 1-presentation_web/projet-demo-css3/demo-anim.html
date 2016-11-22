@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vitesse anim</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+</head>
+<body>
+<style scoped>
+		body{
+    padding: 70px;
+    font: 1em sans-serif;
+}
+h2{
+    font-size: 1.6em;
+    font-weight: 100;
+    text-align: center;
+}
+#vdo-6{
+    font-size: 1.3em;
+    width: 500px;
+    margin: 20px auto 0;
+    background: #eee;
+    text-align: center;
+}
+#vdo-6 div{
+    font-size: .7em;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    white-space: nowrap;
+    background: deepskyblue;
+    -webkit-transition: margin-left 5s linear;
+       -moz-transition: margin-left 5s linear;
+         -o-transition: margin-left 5s linear;
+            transition: margin-left 5s linear;
+}
+.anim div{
+    margin-left: 400px;
+}
+#vdo-6 div:nth-child(2){
+    -webkit-transition-timing-function: ease;
+       -moz-transition-timing-function: ease;
+         -o-transition-timing-function: ease;
+            transition-timing-function: ease;
+}
+#vdo-6 div:nth-child(3){
+    -webkit-transition-timing-function: ease-in;
+       -moz-transition-timing-function: ease-in;
+         -o-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+}
+#vdo-6 div:nth-child(4){
+    -webkit-transition-timing-function: ease-out;
+       -moz-transition-timing-function: ease-out;
+         -o-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+}
+#vdo-6 div:nth-child(5){
+    -webkit-transition-timing-function: ease-in-out;
+       -moz-transition-timing-function: ease-in-out;
+         -o-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+}
+#vdo-6 div:nth-child(6){
+    -webkit-transition-timing-function: steps(4);
+       -moz-transition-timing-function: steps(4);
+         -o-transition-timing-function: steps(4);
+            transition-timing-function: steps(4);
+}
+</style>
+	<h2>Les fonctions d'accélération</h2>
+		<div id="vdo-6">
+	    Cliquez-moi!
+	    <div>linear</div>
+	    <div>ease</div>
+	    <div>ease-in</div>
+	    <div>ease-out</div>
+	    <div>ease-in-out</div>
+	    <div>steps(4)</div>
+</div>
+<script>
+		$(function(){
+
+	    $('[id^=vdo]').click(function(e){
+	        $(this).toggleClass('anim');                
+	    });
+
+	});
+</script>
+</body>
+</html>
